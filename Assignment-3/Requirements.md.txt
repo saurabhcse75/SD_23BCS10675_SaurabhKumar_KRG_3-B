@@ -1,0 +1,17 @@
+Functional Requirement
+Client should be able to register and login himself.
+System should support one-to-one messaging.
+System should also support group messaging as well.
+System should support sending message in both textual as well as media messages.
+System should support preserving message history.
+Client should be able to see delivered messages (read receipts)
+
+
+Non-Functional Requirement
+Target Scale: 1 Billion users having 100 msgs per day
+→ which totals into handling 100B msg/day
+let’s assume: we need 100 TB of storage to store these messages
+CAP Theorem:
+High Availability >>>>> Consistency (Eventual Consistency)
+Latency: approx 200–300 ms
+System should be highly reliable; there should not be any packet loss or message drop
